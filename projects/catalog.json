@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "slug": "keyboard-constellations",
+    "title": "Keyboard Constellations",
+    "date": "2026-09-21",
+    "invitation": "Type a thought and watch it become a repeatable night sky.",
+    "path": "projects/001-keyboard-constellations",
+    "stack": ["JavaScript", "Canvas", "deterministic systems"],
+    "status": "complete"
+  }
+]
