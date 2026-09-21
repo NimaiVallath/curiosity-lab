@@ -19,6 +19,7 @@ curiosity all the way to a finished little thing.
 
 - An interaction you can understand without a tutorial.
 - A small rule that produces a surprising result.
+- Tiny AI and agent ideas whose reasoning can be watched, tested, and questioned.
 - A visible artifact, not just implementation notes.
 - Enough engineering care that the fun survives edge cases.
 - No accounts, ads, trackers, paid APIs, or manufactured productivity claims.

@@ -24,6 +24,19 @@ Rotate among visual play, sound, language, simulation, tiny games, physical-feel
 interfaces, and odd utilities. Avoid tutorial clones, generic CRUD, engagement
 mechanics, fake businesses, and projects built only to create commits.
 
+## Small AI and agent experiments
+
+Every even-numbered experiment should explore a small AI or agent idea. Keep it
+local-first and legible: planning, search, tool choice, memory, evaluation, or a
+tiny learned behavior should be visible in the artifact. Show the loop or trace
+that produced an outcome, include deterministic scenarios or evals, and state
+what the system cannot infer.
+
+Do not label ordinary conditionals as AI, ship a chatbot skin, wrap an API without
+an original interaction, or require a paid model or secret. A mock tool world,
+compact planner, classical algorithm, or optional bring-your-own-model adapter is
+better than pretending a remote model is the whole idea.
+
 ## Workflow
 
 Work on a short-lived branch. Commit only coherent, verified milestones. Run
