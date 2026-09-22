@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Breadcrumb Bot</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <noscript>This picnic needs JavaScript so the ant can think.</noscript>
+  <main>
+    <header>
+      <div>
+        <p class="eyebrow">Curiosity Lab · Experiment 002</p>
+        <h1>Breadcrumb<br><em>Bot</em></h1>
+      </div>
+      <p class="invitation">Move the sugar. Watch a tiny ant sniff out a plan, remember dead ends, and explain every turn.</p>
+    </header>
+
+    <section class="workbench" aria-label="Interactive picnic pathfinder">
+      <div class="board-panel">
+        <div class="toolbar" aria-label="Picnic editing tools">
+          <div class="tool-group">
+            <span class="group-label">Tap the picnic to</span>
+            <button class="tool is-active" type="button" data-tool="goal" aria-pressed="true">◈ Move sugar</button>
+            <button class="tool" type="button" data-tool="leaf" aria-pressed="false">◇ Add / remove leaf</button>
+          </div>
+          <div class="preset-group">
+            <label for="pattern">Picnic</label>
+            <select id="pattern">
+              <option value="garden">Garden path</option>
+              <option value="spiral">Spiral napkin</option>
+              <option value="open">Open blanket</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="picnic-wrap">
+          <div id="picnic" class="picnic" role="grid" aria-label="Nine by nine picnic blanket"></div>
+          <div class="legend" aria-hidden="true">
+            <span><i class="swatch memory"></i> remembered</span>
+            <span><i class="swatch option"></i> considering</span>
+            <span><i class="swatch route"></i> chosen trail</span>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button id="step" class="primary" type="button">One thought</button>
+          <button id="run" type="button">Let it think</button>
+          <button id="reset" type="button">Start over</button>
+        </div>
+      </div>
+
+      <aside class="mind" aria-labelledby="mind-title">
+        <div class="mind-heading">
+          <div>
+            <p class="eyebrow">Inspectable agent</p>
+            <h2 id="mind-title">Inside the ant’s head</h2>
+          </div>
+          <span id="phase" class="phase">searching</span>
+        </div>
+
+        <div class="meter" aria-label="Agent memory summary">
+          <div><strong id="memory-count">0</strong><span>places remembered</span></div>
+          <div><strong id="option-count">1</strong><span>options open</span></div>
+          <div><strong id="decision-count">0</strong><span>search decisions</span></div>
+        </div>
+
+        <p id="status" class="status" aria-live="polite">The ant can smell the sugar. Ask for one thought or let it think.</p>
+        <ol id="trace" class="trace" aria-label="Newest agent decisions first"></ol>
+
+        <details>
+          <summary>What counts as “thinking” here?</summary>
+          <p>The ant uses A* search: it combines distance already walked with a Manhattan-distance scent estimate. Its frontier, memory, chosen trail, and tool trace are all visible—there is no remote model hiding behind the picnic.</p>
+        </details>
+      </aside>
+    </section>
+  </main>
+  <script src="agent.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

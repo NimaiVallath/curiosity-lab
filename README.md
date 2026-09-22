@@ -14,6 +14,7 @@ curiosity all the way to a finished little thing.
 | # | Project | The invitation | Built with |
 |---:|---|---|---|
 | 001 | [Keyboard Constellations](projects/001-keyboard-constellations) | Type a thought and watch it become a repeatable night sky | JavaScript, Canvas, deterministic systems |
+| 002 | [Breadcrumb Bot](projects/002-breadcrumb-bot) | Move the sugar and watch a tiny ant sniff out a plan, remember dead ends, and explain every turn | JavaScript, A* search, inspectable agents |
 
 ## What belongs here
 

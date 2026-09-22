@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { readFileSync, statSync } from 'node:fs';
+import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
@@ -25,12 +25,17 @@ for (const item of catalog) {
   if (project.split('/').at(-1) !== expectedName) {
     throw new Error(`project ${item.id} should use directory ${expectedName}`);
   }
-  for (const file of ['README.md', 'index.html', 'test_constellation.js']) {
+  for (const file of ['README.md', 'index.html']) {
     if (!statSync(join(project, file)).isFile()) throw new Error(`${item.path} is missing ${file}`);
   }
 
+  const testFiles = readdirSync(project)
+    .filter((file) => /^test_.+\.js$/.test(file))
+    .sort();
+  if (testFiles.length === 0) throw new Error(`${item.path} has no test_*.js file`);
+
   console.log(`Testing ${item.path}`);
-  const result = spawnSync(process.execPath, ['--test', join(project, 'test_constellation.js')], {
+  const result = spawnSync(process.execPath, ['--test', ...testFiles.map((file) => join(project, file))], {
     cwd: root,
     stdio: 'inherit',
   });

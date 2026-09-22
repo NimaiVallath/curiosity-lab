@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title description">
+  <title id="title">Breadcrumb Bot planning across a picnic blanket</title>
+  <desc id="description">A warm illustrated interface with a checkered grid, an ant, leaves, sugar, colored search memories, and a panel showing the agent's recent decisions.</desc>
+  <defs>
+    <pattern id="paper" width="32" height="32" patternUnits="userSpaceOnUse"><rect width="32" height="32" fill="#f8f0db"/><path d="M0 0h16v16H0zm16 16h16v16H16z" fill="#f4e8ce"/></pattern>
+    <pattern id="blanket" width="96" height="96" patternUnits="userSpaceOnUse"><rect width="96" height="96" fill="#fff9ed"/><path d="M0 0h48v48H0zm48 48h48v48H48z" fill="#f7dfd4"/></pattern>
+    <filter id="shadow"><feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#554b36" flood-opacity=".22"/></filter>
+  </defs>
+  <rect width="1200" height="675" fill="url(#paper)"/>
+  <text x="62" y="62" fill="#a7342b" font-family="system-ui,sans-serif" font-size="13" font-weight="800" letter-spacing="2">CURIOSITY LAB · EXPERIMENT 002</text>
+  <text x="60" y="137" fill="#22231e" font-family="Georgia,serif" font-size="77" font-weight="900" letter-spacing="-5">Breadcrumb <tspan fill="#d84f3e" font-style="italic" font-weight="500">Bot</tspan></text>
+  <text x="725" y="79" fill="#22231e" font-family="Georgia,serif" font-size="20" font-weight="600"><tspan x="725">Move the sugar. Watch a tiny ant sniff out a plan,</tspan><tspan x="725" dy="29">remember dead ends, and explain every turn.</tspan></text>
+  <rect x="50" y="172" width="1100" height="460" rx="24" fill="#fffaf0" stroke="#d9ccb2" filter="url(#shadow)"/>
+  <rect x="74" y="206" width="620" height="386" rx="17" fill="#f8ddce" stroke="#ad3029" stroke-opacity=".35"/>
+  <rect x="95" y="227" width="344" height="344" fill="url(#blanket)" stroke="#9d312c" stroke-width="3"/>
+  <g stroke="#d8766b" stroke-opacity=".34">
+    <path d="M133 227v344M171 227v344M209 227v344M247 227v344M285 227v344M323 227v344M361 227v344M399 227v344"/>
+    <path d="M95 265h344M95 303h344M95 341h344M95 379h344M95 417h344M95 455h344M95 493h344M95 531h344"/>
+  </g>
+  <g fill="#8a8377"><circle cx="114" cy="514" r="5"/><circle cx="114" cy="476" r="5"/><circle cx="114" cy="438" r="5"/><circle cx="152" cy="438" r="5"/></g>
+  <g fill="#f0bd3f"><circle cx="190" cy="438" r="6"/><circle cx="152" cy="400" r="6"/><circle cx="114" cy="400" r="6"/></g>
+  <g fill="#7561a8"><circle cx="114" cy="514" r="5"/><circle cx="114" cy="476" r="5"/><circle cx="114" cy="438" r="5"/><circle cx="152" cy="438" r="5"/></g>
+  <g font-size="24"><text x="102" y="552">🐜</text><text x="406" y="257">◻</text><text x="211" y="333">🍃</text><text x="250" y="371">🍃</text><text x="326" y="409">🍃</text><text x="364" y="447">🍃</text></g>
+  <rect x="465" y="227" width="203" height="42" rx="21" fill="#d84f3e"/><text x="497" y="253" fill="white" font-family="system-ui,sans-serif" font-size="13" font-weight="750">◈ MOVE SUGAR</text>
+  <rect x="465" y="282" width="203" height="42" rx="21" fill="white" stroke="#d9ccb2"/><text x="480" y="308" fill="#22231e" font-family="system-ui,sans-serif" font-size="13" font-weight="750">◇ ADD / REMOVE LEAF</text>
+  <rect x="465" y="504" width="203" height="50" rx="9" fill="#a7342b"/><text x="515" y="535" fill="white" font-family="system-ui,sans-serif" font-size="14" font-weight="750">ONE THOUGHT</text>
+  <path d="M716 172v460" stroke="#d9ccb2"/>
+  <text x="750" y="219" fill="#a7342b" font-family="system-ui,sans-serif" font-size="11" font-weight="800" letter-spacing="2">INSPECTABLE AGENT</text>
+  <text x="750" y="267" fill="#22231e" font-family="Georgia,serif" font-size="37" font-weight="800">Inside the ant’s head</text>
+  <rect x="1031" y="211" width="86" height="27" rx="14" fill="none" stroke="#d84f3e"/><text x="1046" y="229" fill="#a7342b" font-family="monospace" font-size="11" font-weight="800">SEARCHING</text>
+  <g font-family="system-ui,sans-serif"><text x="750" y="326" font-family="Georgia,serif" font-size="28" font-weight="700">4</text><text x="750" y="346" fill="#6f6a5d" font-size="11">places remembered</text><text x="872" y="326" font-family="Georgia,serif" font-size="28" font-weight="700">3</text><text x="872" y="346" fill="#6f6a5d" font-size="11">options open</text><text x="976" y="326" font-family="Georgia,serif" font-size="28" font-weight="700">4</text><text x="976" y="346" fill="#6f6a5d" font-size="11">search decisions</text></g>
+  <g font-family="system-ui,sans-serif" font-size="13"><path d="M750 386h350M750 444h350M750 502h350" stroke="#d9ccb2"/><text x="750" y="413" fill="#a7342b" font-family="monospace" font-weight="800">REMEMBER</text><text x="848" y="413">Saved 2 promising turns in scent memory.</text><text x="750" y="471" fill="#a7342b" font-family="monospace" font-weight="800">SNIFF</text><text x="848" y="471">Checked 6,0: 2 walked + 12 scent.</text><text x="750" y="529" fill="#a7342b" font-family="monospace" font-weight="800">NOTICE</text><text x="848" y="529">Sugar detected 16 squares away.</text></g>
+  <text x="750" y="580" fill="#6f6a5d" font-family="system-ui,sans-serif" font-size="12">A* search · local only · deterministic scenarios</text>
+</svg>

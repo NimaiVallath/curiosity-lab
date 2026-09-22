@@ -8,5 +8,15 @@
     "path": "projects/001-keyboard-constellations",
     "stack": ["JavaScript", "Canvas", "deterministic systems"],
     "status": "complete"
+  },
+  {
+    "id": 2,
+    "slug": "breadcrumb-bot",
+    "title": "Breadcrumb Bot",
+    "date": "2026-09-22",
+    "invitation": "Move the sugar and watch a tiny ant sniff out a plan, remember dead ends, and explain every turn.",
+    "path": "projects/002-breadcrumb-bot",
+    "stack": ["JavaScript", "A* search", "inspectable agents"],
+    "status": "complete"
   }
 ]
