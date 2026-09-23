@@ -25,6 +25,7 @@
   let timer = null;
   let world = makeWorld('garden');
   let agent = BreadcrumbBot.createAgent(world);
+  let gridFocus = { ...world.start };
 
   function makeWorld(pattern) {
     return {
@@ -61,6 +62,18 @@
     return `${location}: open blanket`;
   }
 
+  function isGridFocus(row, column) {
+    return gridFocus.row === row && gridFocus.column === column;
+  }
+
+  function focusGridCell() {
+    const target = picnic.querySelector(`[data-row="${gridFocus.row}"][data-column="${gridFocus.column}"]`);
+    if (!target) return;
+    picnic.querySelectorAll('.cell').forEach((cell) => { cell.tabIndex = -1; });
+    target.tabIndex = 0;
+    target.focus();
+  }
+
   function renderBoard() {
     picnic.replaceChildren();
     const blocked = new Set(world.blocked);
@@ -68,6 +81,10 @@
     const route = new Set(agent.trail.map(BreadcrumbBot.key));
 
     for (let row = 0; row < world.rows; row += 1) {
+      const rowElement = document.createElement('div');
+      rowElement.className = 'grid-row';
+      rowElement.setAttribute('role', 'row');
+      rowElement.setAttribute('aria-rowindex', String(row + 1));
       for (let column = 0; column < world.columns; column += 1) {
         const value = cellKey(row, column);
         const markers = {
@@ -82,6 +99,7 @@
         button.setAttribute('aria-label', describeCell(row, column, markers));
         button.dataset.row = String(row);
         button.dataset.column = String(column);
+        button.tabIndex = isGridFocus(row, column) ? 0 : -1;
         if (agent.visited.has(value)) button.classList.add('is-memory');
         if (options.has(value)) button.classList.add('is-option');
         if (route.has(value)) button.classList.add('is-route');
@@ -96,8 +114,9 @@
           thing.textContent = symbol;
           button.append(thing);
         }
-        picnic.append(button);
+        rowElement.append(button);
       }
+      picnic.append(rowElement);
     }
   }
 
@@ -144,6 +163,7 @@
     const cell = event.target.closest('.cell');
     if (!cell) return;
     const selected = { row: Number(cell.dataset.row), column: Number(cell.dataset.column) };
+    gridFocus = { ...selected };
     const selectedKey = BreadcrumbBot.key(selected);
     if (BreadcrumbBot.sameCell(selected, world.start)) {
       status.textContent = 'The ant keeps this corner as its starting point.';
@@ -154,6 +174,7 @@
       world.goal = selected;
       world.blocked = world.blocked.filter((item) => item !== selectedKey);
       restart(`Sugar moved to row ${selected.row + 1}, column ${selected.column + 1}. The ant forgot its old plan.`);
+      focusGridCell();
       return;
     }
 
@@ -165,6 +186,29 @@
       ? world.blocked.filter((item) => item !== selectedKey)
       : [...world.blocked, selectedKey];
     restart(world.blocked.includes(selectedKey) ? 'Leaf added. The ant will plan around it.' : 'Leaf removed. A shorter trail may have opened.');
+    focusGridCell();
+  });
+
+  picnic.addEventListener('focusin', (event) => {
+    const cell = event.target.closest('.cell');
+    if (!cell) return;
+    gridFocus = { row: Number(cell.dataset.row), column: Number(cell.dataset.column) };
+  });
+
+  picnic.addEventListener('keydown', (event) => {
+    const cell = event.target.closest('.cell');
+    if (!cell) return;
+    const next = GridNavigation.nextCell(
+      { row: Number(cell.dataset.row), column: Number(cell.dataset.column) },
+      event.key,
+      world.rows,
+      world.columns,
+      event.ctrlKey || event.metaKey,
+    );
+    if (!next) return;
+    event.preventDefault();
+    gridFocus = next;
+    focusGridCell();
   });
 
   document.querySelectorAll('[data-tool]').forEach((button) => {
@@ -192,6 +236,7 @@
   resetButton.addEventListener('click', () => restart());
   patternSelect.addEventListener('change', () => {
     world = makeWorld(patternSelect.value);
+    gridFocus = { ...world.start };
     restart(`Loaded ${patternSelect.options[patternSelect.selectedIndex].text.toLowerCase()}.`);
   });
 

@@ -37,7 +37,8 @@
         </div>
 
         <div class="picnic-wrap">
-          <div id="picnic" class="picnic" role="grid" aria-label="Nine by nine picnic blanket"></div>
+          <div id="picnic" class="picnic" role="grid" aria-label="Nine by nine picnic blanket" aria-describedby="grid-help" aria-rowcount="9" aria-colcount="9"></div>
+          <p id="grid-help" class="grid-help">Keyboard: use arrow keys to roam, Home and End to jump, then Enter or Space to edit.</p>
           <div class="legend" aria-hidden="true">
             <span><i class="swatch memory"></i> remembered</span>
             <span><i class="swatch option"></i> considering</span>
@@ -77,6 +78,7 @@
       </aside>
     </section>
   </main>
+  <script src="grid-navigation.js"></script>
   <script src="agent.js"></script>
   <script src="app.js"></script>
 </body>

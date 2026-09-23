@@ -12,6 +12,8 @@ account, model download, network connection, or API key.
 
 - Choose **Move sugar**, then tap any free square to give the ant a new goal.
 - Choose **Add / remove leaf** to reshape the problem.
+- With a keyboard, Tab enters the blanket once; arrow keys move between squares,
+  Home and End jump along a row, and Enter or Space uses the selected tool.
 - Press **One thought** to inspect the search one decision at a time, or **Let it
   think** to watch the complete search and walk.
 - Try the three picnic layouts. The dots on the blanket reveal remembered places,
@@ -46,7 +48,8 @@ stable terminal states, and invalid worlds all have explicit scenarios.
 
 - Editing the blanket clears stale memory so the explanation always matches the
   visible world.
-- Every square is a keyboard-focusable button with a spoken row, column, and role.
+- The blanket is a structured ARIA grid with one Tab stop, arrow-key navigation,
+  focus-preserving edits, and a spoken row, column, and role for every square.
 - The layout collapses cleanly on small screens, and reduced-motion preferences
   disable trace animation.
 - Search logic is isolated from the interface and uses no browser APIs, making
