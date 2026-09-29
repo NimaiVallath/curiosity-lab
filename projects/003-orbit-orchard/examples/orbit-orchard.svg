@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="500" viewBox="0 0 840 500" role="img" aria-labelledby="title desc">
+  <title id="title">Orbit Orchard: three moons in a little gravity garden</title>
+  <desc id="desc">A golden star sits at the center of three colorful elliptical paths, each with a small orbiting moon.</desc>
+  <defs><radialGradient id="wash"><stop stop-color="#52604a" stop-opacity=".6"/><stop offset="1" stop-color="#171c1a" stop-opacity="0"/></radialGradient></defs>
+  <rect width="840" height="500" rx="26" fill="#171c1a"/><ellipse cx="420" cy="250" rx="400" ry="240" fill="url(#wash)"/>
+  <g fill="none" stroke-width="1.5"><ellipse cx="420" cy="250" rx="142" ry="84" transform="rotate(-20 420 250)" stroke="#f4c46b" stroke-opacity=".48"/><ellipse cx="420" cy="250" rx="218" ry="129" transform="rotate(-20 420 250)" stroke="#83d9cb" stroke-opacity=".45"/><ellipse cx="420" cy="250" rx="296" ry="175" transform="rotate(-20 420 250)" stroke="#ed8db6" stroke-opacity=".42"/></g>
+  <g fill="none" stroke-linecap="round" stroke-width="3"><path d="M502 167 A142 84 -20 0 1 551 216" stroke="#f4c46b"/><path d="M325 197 A218 129 -20 0 1 287 277" stroke="#83d9cb"/><path d="M553 351 A296 175 -20 0 1 619 262" stroke="#ed8db6"/></g>
+  <circle cx="420" cy="250" r="13" fill="#f7dda4"/><circle cx="551" cy="216" r="8" fill="#f4c46b"/><circle cx="287" cy="277" r="9" fill="#83d9cb"/><circle cx="619" cy="262" r="10" fill="#ed8db6"/>
+  <text x="32" y="42" fill="#8fe0bf" font-family="monospace" font-size="13" letter-spacing="2">ORBIT ORCHARD · SAMPLE VIEW</text>
+  <text x="32" y="470" fill="#bdc3ba" font-family="monospace" font-size="12">DRAG A MOON · CHANGE ITS GRAVITY STORY</text>
+</svg>

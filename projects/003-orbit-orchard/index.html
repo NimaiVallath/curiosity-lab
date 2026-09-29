@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Orbit Orchard — tug the moons, grow the paths</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <header>
+      <p class="eyebrow">A little gravity garden</p>
+      <h1>Tug a moon.<br><em>Grow its orbit.</em></h1>
+      <p class="lede">Drag a moon or change its orbit radius. Watch three tiny worlds circle a little star.</p>
+    </header>
+    <section class="instrument" aria-label="Gravity playground">
+      <canvas id="sky" aria-label="Animated orbits around a star. Drag a moon to change its path."></canvas>
+      <div class="controls">
+        <label>Moon <select id="moon"><option value="0">Apricot</option><option value="1">Mint</option><option value="2">Berry</option></select></label>
+        <label class="radius-control" for="radius">Orbit radius <output id="radius-value">1.25</output></label>
+        <input id="radius" type="range" min="0.7" max="3.05" step="0.05" value="1.25" aria-label="Selected moon orbit radius">
+        <button id="pause" type="button" aria-pressed="false">Pause</button>
+        <button id="reset" type="button">Start over</button>
+      </div>
+      <p id="status" class="status" aria-live="polite">Three moons, one tiny gravity well. Try a wider orbit.</p>
+    </section>
+    <footer>A simplified two-dimensional gravity sketch—not a scale model of a real solar system.</footer>
+  </main>
+  <script src="orbits.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

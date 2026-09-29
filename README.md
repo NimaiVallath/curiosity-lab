@@ -15,6 +15,7 @@ curiosity all the way to a finished little thing.
 |---:|---|---|---|
 | 001 | [Keyboard Constellations](projects/001-keyboard-constellations) | Type a thought and watch it become a repeatable night sky | JavaScript, Canvas, deterministic systems |
 | 002 | [Breadcrumb Bot](projects/002-breadcrumb-bot) | Move the sugar and watch a tiny ant sniff out a plan, remember dead ends, and explain every turn | JavaScript, A* search, inspectable agents |
+| 003 | [Orbit Orchard](projects/003-orbit-orchard) | Tug a moon or widen its orbit, then watch its little path grow around a glowing star | JavaScript, canvas, velocity-Verlet simulation |
 
 ## What belongs here
 

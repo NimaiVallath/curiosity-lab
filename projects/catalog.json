@@ -18,5 +18,15 @@
     "path": "projects/002-breadcrumb-bot",
     "stack": ["JavaScript", "A* search", "inspectable agents"],
     "status": "complete"
+  },
+  {
+    "id": 3,
+    "slug": "orbit-orchard",
+    "title": "Orbit Orchard",
+    "date": "2026-09-29",
+    "invitation": "Tug a moon or widen its orbit, then watch its little path grow around a glowing star.",
+    "path": "projects/003-orbit-orchard",
+    "stack": ["JavaScript", "canvas", "velocity-Verlet simulation"],
+    "status": "complete"
   }
 ]
